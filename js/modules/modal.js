@@ -21,22 +21,16 @@ function modal(triggerSelector, modalSelector, modalTimeId) {
 
     //Модальное окно 
 
-
     const modalTrigger = document.querySelectorAll(triggerSelector),
           modal = document.querySelector(modalSelector),
           modalClose = document.querySelectorAll('data-close');
 
-          
-
-          
 
           modalTrigger.forEach(btn => {
             btn.addEventListener('click', () =>  openModal(modalSelector, modalTimeId));
           });
           
-          
-         
-              
+           
 
         modal.addEventListener('click', (e) => {
             if (e.target === modal || e.target.getAttribute('data-close') == '') {
